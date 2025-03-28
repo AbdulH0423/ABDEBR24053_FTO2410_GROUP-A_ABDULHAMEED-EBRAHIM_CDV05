@@ -1,0 +1,88 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+    background-color: #9c9898;
+}
+
+h1, h2 {
+    color: #222;
+}
+
+.header, .section {
+    padding: 3rem 0;
+}
+
+/* Highlight Text */
+.highlight {
+    color: #339c92;
+}
+
+/* Section Styles */
+.section {
+    padding: 2rem 0;
+}
+
+.skills-list, .project-list, .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: inline-block;
+    background: #339c92;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Project Section */
+.project {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #339c92;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #596f6d;
+}
+
+/* Social Links */
+.social-links a {
+    color: #339c92;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #b621fe;
