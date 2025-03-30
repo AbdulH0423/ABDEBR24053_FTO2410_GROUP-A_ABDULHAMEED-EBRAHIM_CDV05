@@ -73,18 +73,17 @@ h1, h2, h3 {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 8px;
+    border: solid 1px rgb(0, 0, 0);
 }
 
 .btn {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    color: #fff;
     background: #339c92;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s ease;
 }
 
 /* header */
