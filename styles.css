@@ -55,10 +55,13 @@ h1, h2, h3 {
     list-style: none;
 }
 
+
+/* Skills Section */
+
 .skills-list li {
     display: inline-block;
-    background: #339c92;
-    color: #fff;
+    /* background: #339c92; */
+    /* color: #fff; */
     padding: 0.5rem 1rem;
     margin: 0.5rem;
     border-radius: 5px;
@@ -84,18 +87,124 @@ h1, h2, h3 {
     transition: background 0.3s ease;
 }
 
-.btn:hover {
-    background: #596f6d;
+/* header */
+
+/* Main Navigation Styles */
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    z-index: 100;
+    
+    transform: translateX(100%); /* Hide Offscreen */
+    transition: transform 300ms ease-in-out;
 }
 
-/* Social Links */
-.social-links a {
-    color: #339c92;
-    margin: 0 1rem;
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav__item {
+    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    color: var(--clr-light);
+    transition: color 200ms ease-in-out;
 }
 
-.social-links a:hover {
-    color: #b621fe;
+.nav__item:hover {
+    color: var(--clr-accent);
+}
+
+/* Backdrop (Overlay Effect) */
+.nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease-in-out;
+    z-index: 50;
+}
+
+/* Open Nav */
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-backdrop {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hamburger Button */
+.nav_toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.hamburger {
+    background: var(--clr-accent);
+    width: 2.5em;
+    height: 3px;
+    border-radius: 0.5em;
+    display: block;
+    position: relative;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before, 
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: var(--clr-accent);
+    width: 2.5em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before {
+    top: 6px;
+}
+
+.hamburger::after {
+    bottom: 6px;
+}
+
+/* Hamburger Animation */
+.nav-open .hamburger {
+    transform: rotate(225deg);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
