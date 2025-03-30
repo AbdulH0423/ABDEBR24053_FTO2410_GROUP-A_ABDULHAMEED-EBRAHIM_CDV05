@@ -14,11 +14,31 @@
 <body class="font-serif bg-gray-100 text-gray-900">
 
     <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>Hello, I'm <span class="highlight">Abdul-Hameed Zainud-Deen Ebrahim</span></h1>
-            <p>Web Developer | Front-End Enthusiast | Tech Lover</p>
+    <header class="relative">
+        <div class="flex flex-col md:flex-row items-center p-4 bg-gray-800">
+            <div class="flex items-center space-x-4">
+                <img src="logos/developer-logo.svg" alt="logo" class="h-20 w-auto">
+                <h1 class="text-3xl font-extrabold text-white">
+                    DevZain
+                </h1>
+            </div>
+            <button class="nav_toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
+    
+        <!-- Sidebar Navigation Modal -->
+        <div class="nav-backdrop"></div> <!-- Backdrop -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav__item">Home</a></li>
+                <li><a href="#about" class="nav__item">About me</a></li>
+                <li><a href="#tech" class="nav__item">Technologies</a></li>
+                <li><a href="#skills" class="nav__item">What I do</a></li>
+                <li><a href="#projects" class="nav__item">My work</a></li>
+                <li><a href="#contact" class="nav__item">Contact Me</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- About Section -->
